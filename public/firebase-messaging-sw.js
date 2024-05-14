@@ -3,15 +3,25 @@ importScripts('https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js'
 importScripts('https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging-compat.js')
 importScripts('https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js')
 
+// const firebaseConfig = {
+//     apiKey: "AIzaSyArEJFDnLDCbhFtbsPblHZzoTKgacBO68Q",
+//     authDomain: "triviatrek-187ec.firebaseapp.com",
+//     databaseURL: "https://triviatrek-187ec-default-rtdb.firebaseio.com",
+//     projectId: "triviatrek-187ec",
+//     storageBucket: "triviatrek-187ec.appspot.com",
+//     messagingSenderId: "593211191281",
+//     appId: "1:593211191281:web:c7708be5233b1a6c1d5e50",
+//     measurementId: "G-2GBPGZ5KSY"
+//   };
+
 const firebaseConfig = {
-    apiKey: "AIzaSyArEJFDnLDCbhFtbsPblHZzoTKgacBO68Q",
-    authDomain: "triviatrek-187ec.firebaseapp.com",
-    databaseURL: "https://triviatrek-187ec-default-rtdb.firebaseio.com",
-    projectId: "triviatrek-187ec",
-    storageBucket: "triviatrek-187ec.appspot.com",
-    messagingSenderId: "593211191281",
-    appId: "1:593211191281:web:c7708be5233b1a6c1d5e50",
-    measurementId: "G-2GBPGZ5KSY"
+    apiKey: "AIzaSyCIX6NpTSCNq6GV9lJXRALwBAQN4tlSG1I",
+    authDomain: "festejos-86f08.firebaseapp.com",
+    projectId: "festejos-86f08",
+    storageBucket: "festejos-86f08.appspot.com",
+    messagingSenderId: "296036253660",
+    appId: "1:296036253660:web:7120fa2097ecc9a4861919",
+    measurementId: "G-WNTMVGP3ME"
   };
 
 // Initialize Firebase
