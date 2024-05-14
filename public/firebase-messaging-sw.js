@@ -15,13 +15,13 @@ importScripts('https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js
 //   };
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCIX6NpTSCNq6GV9lJXRALwBAQN4tlSG1I",
-    authDomain: "festejos-86f08.firebaseapp.com",
-    projectId: "festejos-86f08",
-    storageBucket: "festejos-86f08.appspot.com",
-    messagingSenderId: "296036253660",
-    appId: "1:296036253660:web:7120fa2097ecc9a4861919",
-    measurementId: "G-WNTMVGP3ME"
+    apiKey: "AIzaSyBzM-DJH_cUgH0cpNTS6F2KcOUIcLGpF7E",
+    authDomain: "festejos-ce5cb.firebaseapp.com",
+    projectId: "festejos-ce5cb",
+    storageBucket: "festejos-ce5cb.appspot.com",
+    messagingSenderId: "533277493467",
+    appId: "1:533277493467:web:e8e1978c1376d886e364fe",
+    measurementId: "G-7PXDXMB3LL"
   };
 
 // Initialize Firebase
