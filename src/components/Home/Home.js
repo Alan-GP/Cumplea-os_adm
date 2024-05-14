@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
-import { Col, Row, Avatar, List, Image, Button } from 'antd';
-import juego from '../../img/home.webp';
-import { PlayCircleTwoTone } from '@ant-design/icons';
+import { Col, Row, Avatar, List } from 'antd';
 import { get } from '../../api/peticiones';
 
 export default function Home() {
@@ -63,28 +60,6 @@ export default function Home() {
                 </List.Item>
               )}
             />
-          </div>
-        </Col>
-        <Col xs={24} sm={12}>
-          <div className="ant-component-wrapper">
-            <div className="ant-component">
-              <div className="ant-component-header" style={{ textAlign: 'center' }}>
-                <Button type="text" shape="round" icon={<PlayCircleTwoTone twoToneColor={"#FF9110"} />} style={{ color: '#FF9110', borderColor: '#FF9110', fontWeight: 'bold' }} >
-                  <Link to="/playQuiz">Iniciar Quiz</Link>
-                </Button>
-                <Col span={24} style={{ marginTop: 20 }}>
-                  <Image
-                  rel='preload'
-                  fetchpriority="high"
-                  alt='Imagen'
-                    width={150}
-                    height={150}
-                    src={juego}
-                    preview={false}
-                  />
-                </Col>
-              </div>
-            </div>
           </div>
         </Col>
       </Row>

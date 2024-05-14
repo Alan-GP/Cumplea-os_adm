@@ -9,7 +9,7 @@ export default function Plantilla2({ children }) {
         <Layout>
             {children}
             <Footer style={{ textAlign: 'center' }}>
-                TriviaTrek © {new Date().getFullYear()}
+            FiestaPerfecta © {new Date().getFullYear()}
             </Footer>
         </Layout>
     );

@@ -1,4 +1,4 @@
-# TriviaTrek
+# FiestaPerfecta
 
 ## Instalación
 

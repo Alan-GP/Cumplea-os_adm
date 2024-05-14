@@ -155,7 +155,7 @@ export default function Registro() {
               </Item>
 
               <Item style={{ textAlign: 'center' }}>
-                <Button className='btn-orange' type="primary" htmlType="submit" loading={loading}>Registrar Usuario</Button>
+                <Button className='btn-gris' type="primary" htmlType="submit" loading={loading}>Registrar Usuario</Button>
               </Item>
 
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingBottom: '20px' }}>

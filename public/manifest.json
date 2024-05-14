@@ -1,11 +1,11 @@
 {
-  "short_name": "TriviaTrek-app",
-  "name": "PWA TriviaTrek",
+  "short_name": "FiestaPerfecta-app",
+  "name": "PWA FiestaPerfecta",
   "start_url": "/",
   "background_color": "#EE6400",
   "theme_color": "#EE6400",
   "display": "standalone",
-  "id": "triviassPwa",
+  "id": "fiestasPwa",
   "orientation": "portrait",
   "icons": [
     {

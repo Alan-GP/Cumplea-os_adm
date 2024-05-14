@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Alert, Button, Col, Form, Image, Input, Row, Typography } from 'antd';
 import { useAuth } from '../../context/authContext';
 import { useNavigate } from 'react-router-dom';
+import { GoogleOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
 
@@ -9,7 +10,7 @@ export default function Login() {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
-  const { login, user } = useAuth();
+  const { login, user, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
 
   const onFinish = async (values) => {
@@ -69,9 +70,9 @@ export default function Login() {
           <Col xs={1} sm={2} md={6} lg={7}></Col>
           <Col xs={22} sm={20} md={12} lg={10} className='contenedorRegistro'>
 
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <Image rel="preload" width="200" height="200" src='Logo.webp' preview={false} alt="" />
-          </div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Image rel="preload" src='Logo.webp' preview={false} alt="" style={{ width: '250px', height: '250px' }} />
+            </div>
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: '10px', paddingBottom: '20px' }}>
               <Text style={{ textAlign: 'center', fontSize: 30, fontWeight: 'bold' }}>Inicia Sesión</Text>
@@ -127,8 +128,13 @@ export default function Login() {
               </Form.Item>
 
               <Form.Item style={{ textAlign: 'center' }}>
-                <Button className='btn-orange' type="primary" htmlType="submit" loading={loading}>Iniciar Sesión</Button>
+                <Button className='btn-gris' type="primary" htmlType="submit" loading={loading}>Iniciar Sesión</Button>
               </Form.Item>
+              
+              <Form.Item style={{ textAlign: 'center' }}>
+                <Button type="btn-gris" onClick={loginWithGoogle} icon={<GoogleOutlined style={{ fontSize: '20px' }} />}>Iniciar Sesión con Google</Button>
+              </Form.Item>
+
 
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: '10px' }}>
                 ¿No tienes una cuenta?<Button type="link" href="/registro">Regístrate aquí</Button>

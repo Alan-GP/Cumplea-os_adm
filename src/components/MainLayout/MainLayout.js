@@ -32,19 +32,19 @@ export default function MainLayout() {
 
     return (
         <>
-            <Header style={{ display: 'flex', alignItems: 'center', background: '#FF9110', justifyContent: 'space-between' }}>
+            <Header style={{ display: 'flex', alignItems: 'center', background: '#49404F', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
 
-                    <Image rel="preload" fetchpriority="high"  height={50} width={50} alt="" src='Logo.webp' preview={false} />
+                    <Image rel="preload" fetchpriority="high" height={40} width={40} alt="" src='Logo.webp' preview={false} style={{ marginTop: '-30px' }} />
 
                     <Menu
                         theme="light"
                         mode="horizontal"
-                        style={{ flex: 1, minWidth: 0, background: '#FF9110', fontSize: 20, fontWeight: 'bold' }}
+                        style={{ flex: 1, minWidth: 0, background: '#49404F', fontSize: 20, fontWeight: 'bold' }}
                     >
 
                         {items.map(item => (
-                            <Menu.Item key={item.key}>
+                            <Menu.Item key={item.key} style={{ color: 'white' }}>
                                 <Link to={item.path}>{item.label}</Link>
                             </Menu.Item>
                         ))}
@@ -52,9 +52,9 @@ export default function MainLayout() {
                     </Menu>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <Button type='text' title='Notificaciones' onClick={openNotification} style={{ marginRight: 10 }}
+                    <Button type='text' title='Notificaciones' onClick={openNotification} style={{ marginRight: 10, color: 'white' }}
                         shape="circle" icon={<NotificationOutlined />} />
-                    <Button type='text' title='Cerrar sesión' onClick={onLogout} icon={<LogoutOutlined />} >
+                    <Button type='text' title='Cerrar sesión' onClick={onLogout} icon={<LogoutOutlined />} style={{ color: 'white' }} >
                         Salir
                     </Button>
                 </div>
