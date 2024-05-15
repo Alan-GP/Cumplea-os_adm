@@ -21,14 +21,14 @@ export default function NotifiProvider({ children }) {
     const getTokenNotificacion = async () => {
         if (user) {
             const token = await getToken(messaging, {
-                vapidKey: 'BNfvXutiTWZziOfQ1tIUj07XgZzJNvHglL2LZUBTX3gCZviVdDEU7Ligmz84T35a5o4c9Sol_9m0exxYYjv7EQg'
+                vapidKey: 'BPzlzAmtiI6JrL3VO6rfnH1yj48nn0sPZS8Ci6YQymhx42l6yL8n1wfO2uiSJSPI1x338WwLc0LHIy0e5typOEk'
             }).catch((error) => console.log('No se pudo obtener el token', error));
 
             if (token) {
                 console.log(token);
             } else {
                 console.log('No se pudo obtener el token');
-                console.log('Permiso:', Notification.permission);
+                // console.log('Permiso:', Notification.permission);
             }
         }
     };

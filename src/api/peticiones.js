@@ -11,6 +11,9 @@ const get = async (endpoint) => {
     };
 
     try {
+        // Localhost
+        // const response = await axios.get(urlServerLocal + endpoint, config);
+        // Producción
         const response = await axios.get(urlServer + endpoint, config);
         return await response.data;
     } catch (error) {
@@ -20,15 +23,18 @@ const get = async (endpoint) => {
 }
 
 const post = async (endpoint, body = {}) => {
-    const token = localStorage.getItem('token');
+    // const token = localStorage.getItem('token');
     const config = {
+        // 'Authorization': `Bearer ${token}`,
         headers: {
-            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
         },
     };
 
     try {
+        // Localhost
+        // const response = await axios.post(urlServerLocal + endpoint, body, config);
+        // Producción
         const response = await axios.post(urlServer + endpoint, body, config);
         return await response.data;
     } catch (error) {

@@ -10,6 +10,7 @@ import {
     updateProfile,
 } from "firebase/auth";
 import { auth } from "../firebase";
+import { post } from "../api/peticiones";
 
 export const authContext = createContext();
 
@@ -53,6 +54,7 @@ export function AuthProvider({ children }) {
             displayName: userSession.displayName,
             photoURL: userSession.photoURL,
         };
+        console.log(userData);
         return userData;
     };
 
@@ -61,9 +63,28 @@ export function AuthProvider({ children }) {
             setUser(currenUser);
             setLoading(false);
             if (currenUser) {
+                console.log('Usuario que inició sesión:', currenUser);
+
+                async function insertarUsuario() {
+                    try {
+                        const response = await post('/user/newUser', {
+                            uid: currenUser.uid,
+                            photoURL: currenUser.photoURL,
+                            phoneNumber: currenUser.phoneNumber,
+                            email: currenUser.email,
+                            displayName: currenUser.displayName,
+                        });
+
+                        console.log('Respuesta del servidor:', response);
+                    } catch (error) {
+                        console.error('Error al insertar el usuario:', error);
+                    }
+                }
+
                 const token = await currenUser.getIdToken();
                 if (!localStorage.getItem('token')) {
                     localStorage.setItem("token", token);
+                    insertarUsuario();
                 }
                 if (navigator.serviceWorker.controller) {
                     // mandamos el token al SW

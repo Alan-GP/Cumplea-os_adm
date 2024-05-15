@@ -20,4 +20,5 @@ export const auth = getAuth(app);
 export const messaging = getMessaging(app);
 
 // Export urlServer
+export const urlServerLocal = 'http://localhost:3001';
 export const urlServer = 'https://us-central1-festejos-ce5cb.cloudfunctions.net/api';
